@@ -32,3 +32,109 @@
     height: 300px;
   }
 }
+/* MRVION PRODUCTS */
+
+.products-section {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.products-intro {
+  max-width: 650px;
+  margin: 18px auto 0;
+  line-height: 1.8;
+  opacity: 0.72;
+}
+
+.mrvion-product-grid {
+  width: min(1180px, 92%);
+  margin: 65px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.mrvion-product-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mrvion-product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
+}
+
+.mrvion-product-image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f4f1e9;
+}
+
+.mrvion-product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mrvion-product-card:hover .mrvion-product-image img {
+  transform: scale(1.04);
+}
+
+.mrvion-product-info {
+  padding: 25px 25px 30px;
+}
+
+.mrvion-product-info span {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  opacity: 0.55;
+}
+
+.mrvion-product-info h3 {
+  margin: 0 0 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  line-height: 1.05;
+}
+
+.mrvion-product-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.65;
+}
+
+@media (max-width: 900px) {
+  .mrvion-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-section {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  .mrvion-product-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin-top: 45px;
+  }
+
+  .mrvion-product-info {
+    padding: 22px 20px 26px;
+  }
+
+  .mrvion-product-info h3 {
+    font-size: 25px;
+  }
+}
